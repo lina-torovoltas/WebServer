@@ -72,6 +72,11 @@ segment readable writeable
 
 segment readable executable
 start:
+    mov eax, 48
+    mov ebx, 13
+    mov ecx, 1
+    int 0x80
+
     mov eax, 102
     mov ebx, 1
     mov ecx, socket_args
